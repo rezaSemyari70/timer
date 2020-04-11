@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+
+<body>
+
+        <div class="date">
+            <div id="time"></div>
+            <div id="mainTime">
+                <button id="hour12" onmouseover="changeColor()" onclick="changeFormat()">24/12</button>
+                <button id="stw" onclick="stopWatch()">stopWatch</button>
+                <button id="timer">Timer</button>
+            </div>
+            <div id="partStopWatch" >
+                <button id="back" onmouseover="changeColor()" onclick="back()">Back</button>
+                <button id="start" onmouseover="changeColor()" onclick="start()">Start</button>
+            </div>
+            <div id="partTimer">
+                <button id="stop" onmouseover="changeColor()" onclick="">stop</button>
+                <button id="restart" onmouseover="changeColor()" onclick="">restart</button>
+                <button id="lab" onmouseover="changeColor()" onclick="">Lab</button>
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+</body>
+
+</html>

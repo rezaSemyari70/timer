@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100%;
+
+    background-color: #212121;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    margin : 0 ;
+}
+
+.date {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    min-width: 86px;
+    height: 20px;
+    background-color: rgb(26, 26, 26);
+    color: gainsboro;
+    border-radius: 15px;
+    border: none;
+}
+
+#time {
+    height: 80px;
+    color: rgb(231, 231, 231);
+    font-size: 5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 30px;
+}
+
+#mainTime {
+    width: 43%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#partStopWatch , #partTimer{
+    display: none;
+}
