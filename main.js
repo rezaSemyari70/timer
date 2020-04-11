@@ -43,7 +43,15 @@ function back(){
 }
 
 function start(){
-    document.getElementById('time').innerText = [new Date().getHours(),new Date().getMinutes(),new Date().getSeconds()].join(':') ;
+    document.getElementById('partStopWatch').style.display = "none" ;
+    document.getElementById('partTimer').style.display = "flex";
+    let start = new Date();
+    stwsetInterval(()=>{
+        let t = new Date() ;
+        t -= start ;
+        document.getElementById('time').innerText = [new Date().getHours(),new Date().getMinutes(),new Date().getSeconds()].join(':') ;
+        flag = true;
+    },1000);
 
 }
 
