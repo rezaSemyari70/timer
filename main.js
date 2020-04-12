@@ -11,9 +11,6 @@ function changeColor(){
 };
 
 function changeFormat(){
-
-    // document.getElementById('partStopWatch').style.display = "none" ;
-    // document.getElementById('partTimer').style.display = "none" ;
     if(flag){
         clearInterval(myTime);
         flag = false ;
@@ -34,7 +31,9 @@ function changeFormat(){
 function stopWatch(){
     document.getElementById('mainTime').style.display = "none" ;
     document.getElementById('partStopWatch').style.display = "flex";
-   
+    clearInterval(myTime)
+    let zeroTime = [Math.floor(new Date().getHours()/24),Math.floor(new Date().getMinutes()/60) , Math.floor(new Date().getSeconds()/60)].join(':');
+    document.getElementById('time').innerText = zeroTime ;
 }
 
 function back(){
@@ -45,15 +44,31 @@ function back(){
 function start(){
     document.getElementById('partStopWatch').style.display = "none" ;
     document.getElementById('partTimer').style.display = "flex";
-    let start = new Date();
-    stwsetInterval(()=>{
-        let t = new Date() ;
-        t -= start ;
-        document.getElementById('time').innerText = [new Date().getHours(),new Date().getMinutes(),new Date().getSeconds()].join(':') ;
-        flag = true;
+    
+    // let t = new Date();
+    let sec = Math.floor(new Date().getSeconds()/60) ;
+    let min = Math.floor(new Date().getMinutes()/60) ;
+    let hour = Math.floor(new Date().getHours()/24) ;
+
+    setInterval(()=>{
+        // currnetTime -= start ;
+        if(sec === 59){
+            min++;
+            sec = 0;
+        }
+        if(min === 59 && sec === 59){
+            hour++;
+        }
+        sec++
+
+        document.getElementById('time').innerText = [hour,min,sec].join(':') ;
     },1000);
 
 }
+
+
+
+
 
 
 
