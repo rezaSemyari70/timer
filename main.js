@@ -53,10 +53,7 @@ function start() {
     document.getElementById('partStopWatch').style.display = "none";
     document.getElementById('partTimer').style.display = "flex";
 
-    // let t = new Date();
-
-    setInterval(() => {
-        // currnetTime -= start ;
+    stopTimer = setInterval(() => {
         if (sec === 59) {
             min++;
             sec = 0;
@@ -73,8 +70,15 @@ function start() {
 }
 
 function stop() {
-    clearInterval(start);
+    clearInterval(stopTimer);
+    document.getElementById('partTimer').style.display = "none";
+    document.getElementById('partStop').style.display = "flex";
+}
 
+function resume(){
+    start();
+    document.getElementById('partStopWatch').style.display = "none";
+    document.getElementById('partTimer').style.display = "none";
 }
 
 function restart() {

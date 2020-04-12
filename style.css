@@ -46,6 +46,6 @@ button {
     justify-content: space-around;
 }
 
-#partStopWatch , #partTimer{
+#partStopWatch , #partTimer , #partStop{
     display: none;
 }
